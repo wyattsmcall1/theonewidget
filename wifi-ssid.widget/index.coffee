@@ -14,7 +14,7 @@ refreshFrequency: 10000
 
 style: """
   top: 403px
-  left: 220px
+  left: 223px
   color: #7dff7d
   font-family: San Francisco Display
 
@@ -24,12 +24,10 @@ style: """
     border-radius 5px
     text-shadow: 0 0 1px rgba(#000, 0.5)
     background: rgba(#FFF, 0.1)
-    width: 94px
     font-size: 11px
     font-weight: 400
-    padding: 10px 8px 2px 8px
-    
-
+    width: 96px
+    padding: 6px 6px 6px 6px
 
     &:after
       content: 'WiFi SSID'

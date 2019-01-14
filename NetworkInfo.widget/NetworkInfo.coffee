@@ -56,6 +56,7 @@ style: """
   padding:0px
   left: 10px
   top: 403px
+  width: 210px
   background:rgba(#FFF, .1)
   border:1px solid rgba(#FFF, .1)
   border-radius:10px

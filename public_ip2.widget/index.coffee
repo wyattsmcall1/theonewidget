@@ -8,14 +8,14 @@ style: """
 
   color white1
   white-space nowrap
-  width 50px
   padding 1pxpx 1px 1pxpx 1px
   align-items right
   display flex
   color #fff
   font-family Helvetica Neue
-  text-align right
+  text-align left
   padding-left 0px
+  
   
   div
     display: block
@@ -24,7 +24,7 @@ style: """
     font-size: 31px
     font-weight: 100
     border-radius 5px
-    
+    width 265px
 
     &:after
       content: 'public IP'
