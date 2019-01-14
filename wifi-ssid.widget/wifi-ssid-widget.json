@@ -1,0 +1,6 @@
+{
+  "name": "WiFi SSID",
+  "description": "Displays the current connected wifi network SSID",
+  "author": "Joe Kelley",
+  "email": "joe@kelleydata.com"
+}
