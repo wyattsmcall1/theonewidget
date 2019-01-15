@@ -1,5 +1,5 @@
 #CHANGE "USER" TO YOUR USERNAME/HOMEFOLDER!!!
-command: "cd '/Users/wyattsmcall/Library/Application\ Support/Übersicht/widgets/solar-system.widget/' && ./script.sh"
+command: "solar-system.widget/script.sh"
 
 #Sets refresh rate in milliseconds
 #Default = 86400000 (1 day)
