@@ -1,4 +1,4 @@
-# theonewidget
+# The One Widget
 TheOneWidget - Epic Sidebar for Übersicht
 
 This widget contains a sidebar composed of several popular Ubersicht widgets, edited with various style modifications, and bug fixes. 
