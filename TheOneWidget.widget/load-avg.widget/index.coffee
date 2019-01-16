@@ -32,15 +32,15 @@ style: """
       position: relative
 
     .col1
-      background: rgba(#fff, 0.2)
+      background: rgba(#fff, 0.1)
       border-radius 5px
 
     .col2
-      background: rgba(#fff, 0.1)
-      border-radius 5px
-    
-    .col3
       background: rgba(#fff, 0.05)
+      border-radius 5px
+ 
+    .col3
+      background: rgba(#fff, 0.025)
       border-radius 5px
 
     p

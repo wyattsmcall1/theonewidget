@@ -21,7 +21,7 @@ render: -> """
       clip-path="url(#cut-off-left)" />
     <rect id="charge" x="3" y="3" rx="2" ry="2" height="56" />
     <text id="text" x="8" y="36" style="font-size:18">##%</text>
-    <path id="bolt" d="M3 0l-3 5h2v3l3-5h-2v-3z" transform="translate(54,21), scale(2)" />
+    <path id="bolt" d="M3 0l-3 5h2v3l3-5h-2v-3z" transform="translate(57,21), scale(2)" />
   </svg>
 """
 
