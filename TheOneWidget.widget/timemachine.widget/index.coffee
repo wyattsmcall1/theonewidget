@@ -93,8 +93,8 @@ style: """
   font-weight 100
   line-height 1.5
   padding 0
-  left 267px
-  top 485px
+  left 263px
+  top 482px
   height 10px
   opacity 1
 

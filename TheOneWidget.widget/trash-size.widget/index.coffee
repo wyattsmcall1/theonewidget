@@ -23,7 +23,7 @@ style: """
   border-radius: 5px
 
   img
-    height: 30px
+    height: 27px
     margin-bottom: -3px
 
   a

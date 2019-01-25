@@ -23,7 +23,7 @@ if theme == 'mono' || theme == 'dark'
   uptimeColor	= 'WHITE'
   lineColor		= 'WHITE'
   bkground		= 'rgba(#FFF, 0.1)'
-  opacityLevel	= '0.6'
+  opacityLevel	= '1'
 
 else if theme == 'paper'
   labelColor	= 'WHITE' 
@@ -38,7 +38,7 @@ else
   nameColor		= '#D3D3D3'
   uptimeColor	= '#7dff7d'
   lineColor		= '#00BFFF'	  # Blue
-  bkground		= 'rgba(#000, 0.5)'
+  bkground		= 'rgba(#000, 0.1)'
   opacityLevel	= '1'
   
  if theme == 'dark' 
@@ -59,8 +59,7 @@ style: """
 
   div
     display: block
-    border: 1px solid #{lineColor}
-    border-radius 5px
+    border-radius: 5px
     text-shadow: 0 0 1px #{bkground}
     background: #{bkground}
     font-size: 12px
