@@ -13,7 +13,7 @@ render: (output) -> """
 
 style: """
   top: 482px
-  left: 160px
+  left: 158px
   font-size:18px
   font-family: Helvetica Neue
   font-weight: 100
