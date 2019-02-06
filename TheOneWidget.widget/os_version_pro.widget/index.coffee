@@ -52,7 +52,7 @@ command: "system_profiler SPSoftwareDataType | awk '{ if((/System Version/) && (
 refreshFrequency: 86400000
 
 style: """
-  top:	482px
+  top:	480px
   left: 10px
   font-family: Avenir Next
   color: #{uptimeColor}
@@ -89,8 +89,8 @@ style: """
     margin: 1px
       
   img
-    height: 40px
-    width: 40px
+    height: 44px
+    width: 44px
     margin-bottom: -20px
     
   .osVersion 

@@ -12,8 +12,8 @@ render: (output) -> """
 """
 
 style: """
-  top: 482px
-  left: 158px
+  top: 480px
+  left: 160px
   font-size:18px
   font-family: Helvetica Neue
   font-weight: 100
@@ -23,7 +23,7 @@ style: """
   border-radius: 5px
 
   img
-    height: 27px
+    height: 31px
     margin-bottom: -3px
 
   a

@@ -14,7 +14,7 @@ refreshFrequency: 10000
 
 style: """
   top: 403px
-  left: 223px
+  left: 222px
   color: #7dff7d
   font-family: San Francisco Display
 

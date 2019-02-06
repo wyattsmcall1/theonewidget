@@ -121,7 +121,7 @@ style: """
     color: #{ settings.colors.accent }
 
   .txt-small
-    font-size: 31px
+    font-size: 25px
     font-weight: 500
 
   .txt-large
