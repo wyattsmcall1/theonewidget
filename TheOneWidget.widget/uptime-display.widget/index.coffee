@@ -3,7 +3,7 @@ command: "uptime-display.widget/show-uptime.sh"
 refreshFrequency: 43200000
 
 style: """
-  top: 820px
+  top: 825px
   left: 10px
   color: #fff
   font-family: Helvetica Neue

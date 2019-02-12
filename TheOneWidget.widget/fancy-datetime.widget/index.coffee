@@ -84,7 +84,7 @@ locale: locale
 refreshFrequency: 1000
 
 style: """
-  top: 920px
+  top: 922px
   left: 207px
   font-family: 'Ubuntu', sans-serif
   font-size: 6px
@@ -95,7 +95,7 @@ style: """
   .container
     position: relative
     display: table
-    height: 115px
+    height: 114px
     padding: 1px 2px
     width: 393px
     border-radius: 5px
