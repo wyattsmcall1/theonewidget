@@ -49,7 +49,7 @@ update: (output, domEl) ->
 style: """
   xxwidth:140px
   top: 6pt
-  left: 250pt
+  left: 249pt
   font-family: Helvetica Neue
   background:rgba(#FFF, 0.1)
 

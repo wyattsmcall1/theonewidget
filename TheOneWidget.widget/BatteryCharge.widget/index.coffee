@@ -57,7 +57,7 @@ style: """
     opacity = .7
 
     top: 856px
-    left: 446px
+    left: 440px
     font-family: Helvetica Neue
     font-size: 1em * scale
 
