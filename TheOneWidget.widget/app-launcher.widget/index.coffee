@@ -99,7 +99,7 @@ afterRender: (domEl) ->
 style: """
   position: fixed
   top: 8px
-  left: 416px
+  left: 414px
   background:rgba(#FFF, .1)
   border-radius:10px
 

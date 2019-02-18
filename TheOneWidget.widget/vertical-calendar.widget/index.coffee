@@ -9,7 +9,7 @@ currentDate: null
 style: """
 
   top: 7px
-  left: 449px
+  left: 446px
   color: white
 
   .spacer
