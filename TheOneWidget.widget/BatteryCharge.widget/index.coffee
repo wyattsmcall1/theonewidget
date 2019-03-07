@@ -17,7 +17,7 @@ render: -> """
       </clipPath>
     </defs>
     <rect id="hull" x="1" y="1" rx="3" ry="3" width="104" height="60" />
-    <circle id="tip" cx="104" cy="25" r="6"
+    <circle id="tip" cx="104" cy="30" r="6"
       clip-path="url(#cut-off-left)" />
     <rect id="charge" x="3" y="3" rx="2" ry="2" height="56" />
     <text id="text" x="8" y="36" style="font-size:18">##%</text>
