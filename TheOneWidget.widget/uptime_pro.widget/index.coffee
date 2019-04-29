@@ -73,14 +73,14 @@ style: """
 
   div
     display: block
-    border: 1px solid #{lineColor}
+    border: 0px solid #{lineColor}
     border-radius 5px
     text-shadow: 0 0 1px #{bkground}
     background: #{bkground}
     font-size: 16px
     font-weight: 400
     opacity: #{opacityLevel}
-    padding: 4px 6px 10px 4px
+    padding: 6px 6px 10px 6px
     width: 118px
     
     &:after
