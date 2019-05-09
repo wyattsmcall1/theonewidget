@@ -116,7 +116,7 @@ style: """
 """
 
 render: -> """
-  <div><img id="arrowIcon" src="">
+  <div>
   <a class='uptime'></a><p class='computername'></p></div>
 """
 
@@ -132,4 +132,3 @@ update: (output,domEl) ->
   else
     div.find('.computername').html('Uptime is not available')
   		 
-  document.getElementById("arrowIcon").src=displayIcon
