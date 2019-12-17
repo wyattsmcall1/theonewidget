@@ -13,17 +13,19 @@ render: (output) -> """
 
 style: """
   top: 480px
-  left: 160px
-  font-size:18px
+  left: 178px
+  font-size: 14px
   font-family: Helvetica Neue
   font-weight: 100
   color: #fff
+  width: 62px
+  height: 33px
   background-color: rgba(#FFF, 0.1)
-  padding: 11px 11px 11px 11px
+  padding: 10px 10px 10px 10px
   border-radius: 5px
 
   img
-    height: 31px
+    height: 28px
     margin-bottom: -3px
 
   a

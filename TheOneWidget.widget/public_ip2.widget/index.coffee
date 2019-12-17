@@ -3,8 +3,8 @@ command: "./public_ip2.widget/script.sh"
 refreshFrequency: '1m'
 
 style: """
-  left 142px
-  top 825px
+  left 189px
+  top 820px
 
   color white1
   white-space nowrap
@@ -21,10 +21,10 @@ style: """
     display: block
     text-shadow: 0 0 1px rgba(#000, 0.5)
     background: rgba(#fff, 0.1)
-    font-size: 31px
+    font-size: 22px
     font-weight: 100
     border-radius 5px
-    width 265px
+    width 220px
 
     &:after
       content: 'public IP'

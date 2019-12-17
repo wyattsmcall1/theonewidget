@@ -1,29 +1,6 @@
-# You may exclude certain drives (separate with a pipe)
-# Example: exclude = 'MyBook' or exclude = 'MyBook|WD Passport'
-exclude   = 'NONE'
+command: "df -lk"
 
-# Use base 10 numbers, i.e. 1GB = 1000MB. Leave this true to show disk sizes as
-# OS X would (since Snow Leopard)
-base10       = true
-
-# appearance
-filledStyle  = false # set to true for the second style variant. bgColor will become the text color
-
-width        = '367px'
-barHeight    = '36px'
-labelColor   = '#fff'
-usedColor    = '#d7051d'
-freeColor    = '#525252'
-bgColor      = '#fff'
-borderRadius = '3px'
-bgOpacity    = 0.9
-
-# You may optionally limit the number of disk to show
-maxDisks: 1
-
-command: "df -#{if base10 then 'H' else 'h'} | grep '/dev/' | while read -r line; do fs=$(echo $line | awk '{print $1}'); name=$(diskutil info $fs | grep 'Volume Name' | awk '{print substr($0, index($0,$3))}'); echo $(echo $line | awk '{print $2, $3, $4, $5}') $(echo $name | awk '{print substr($0, index($0,$1))}'); done | grep -vE '#{exclude}'"
-
-refreshFrequency: 20000
+refreshFrequency: 5000
 
 style: """
   // Change bar height
@@ -31,6 +8,12 @@ style: """
 
   // Align contents left or right
   widget-align = left
+
+  // Opposite of align
+  if (widget-align == left)
+    widget-align-anti = right
+  else
+    widget-align-anti = left
 
   // Position this where you want
   top 103px
@@ -49,11 +32,15 @@ style: """
     position: relative
     clear: both
 
-  .container:not(:first-child)
-    margin-top: 20px
-
   .widget-title
     text-align: widget-align
+
+  .disk-name
+    float: widget-align-anti
+    font-weight bold
+
+  .widget-name
+    float: widget-align
 
   .stats-container
     margin-bottom 5px
@@ -63,13 +50,10 @@ style: """
     font-size: 14px
     font-weight: 300
     color: rgba(#fff, .9)
-    text-shadow: 0 1px 0px rgba(#000, .7)
+    text-shadow: 0 1px 0px rgba(#FFF, .1)
     text-align: widget-align
 
-  td.pctg
-    float: right
-
-  .widget-title, p
+  .widget-title
     font-size 10px
     text-transform uppercase
     font-weight bold
@@ -108,41 +92,74 @@ style: """
 
   .bar-used
     background: rgba(#c00, .5)
+
+  .bar-available
+    background: rgba(#0bf, 0)
+
 """
 
-humanize: (sizeString) ->
-  sizeString + 'B'
 
-
-renderInfo: (total, used, free, pctg, name) -> """
+render: -> """
   <div class="container">
-    <div class="widget-title">#{name} #{@humanize(total)}</div>
+    <div class="widget-title">
+      <div class="widget-name">Macintosh HD</div>
+      <div class="disk-name"></div>
+    </div>
     <table class="stats-container" width="100%">
       <tr>
-        <td class="stat"><span class="used">#{@humanize(used)}</span></td>
-        <td class="stat"><span class="free">#{@humanize(free)}</span></td>
-        <td class="stat pctg"><span class="pctg">#{pctg}</span></td>
+        <td class="stat"><span class="used"></span></td>
+        <td class="stat"><span class="available"></span></td>
+        <td class="stat"><span class="total"></span></td>
+        <td class="stat"><span class="usage"></span></td>
       </tr>
       <tr>
         <td class="label">used</td>
-        <td class="label">free</td>
-        <td class="label pctg">full</td>
+        <td class="label">available</td>
+        <td class="label">total</td>
+        <td class="label">usage</td>
       </tr>
     </table>
     <div class="bar-container">
-      <div class="bar bar-used" style="width: #{pctg}"></div>
+      <div class="bar bar-used"></div>
+      <div class="bar bar-available"></div>
     </div>
   </div>
 """
 
 update: (output, domEl) ->
-  disks = output.split('\n')
-  $(domEl).html ''
 
-  for disk, i in disks[..(@maxDisks - 1)]
-    args = disk.split(' ')
-    if (args[4])
-      args[4] = args[4..].join(' ')
-      $(domEl).append @renderInfo(args...)
+  usage = (kb) ->
+    mb = kb / 1024
+    usageFormat mb
 
-  $(domEl).append ''
+  usageFormat = (mb) ->
+    if mb > 1024
+      gb = mb / 1024
+      "#{parseFloat(gb.toFixed(2))}GB"
+    else
+      "#{parseFloat(mb.toFixed())}MB"
+
+  updateStat = (sel, usedBytes, totalBytes) ->
+    percent = (usedBytes / totalBytes * 100).toFixed(1) + "%"
+    $(domEl).find(".#{sel}").text usage(usedBytes)
+    $(domEl).find(".bar-#{sel}").css "width", percent
+
+  updateCapacity = (cap) ->
+    $(domEl).find(".usage").text cap
+
+  lines = output.split "\n"
+  mainDisk = lines[2].split(/\ +/)
+
+  $(domEl).find(".disk-name").text mainDisk[0]
+
+  diskName = mainDisk[0]
+  totalBlocks = mainDisk[1]
+  usedBlocks = mainDisk[2]
+  availableBlocks = mainDisk[3]
+  capacityRatio = mainDisk[4]
+
+  $(domEl).find(".total").text usageFormat(totalBlocks / 1024)
+
+  updateStat 'used', usedBlocks, totalBlocks
+  updateStat 'available', availableBlocks, totalBlocks
+  updateCapacity capacityRatio

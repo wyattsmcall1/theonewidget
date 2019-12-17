@@ -22,7 +22,7 @@ settings =
       accent: 'rgba(255, 255, 255, .75)'
       background: 'rgba(255, 255, 255, .1)'
     shadows:
-      box: '0 0 1.25em rgba(0, 0, 0, .5)'
+      box: '0 0 1.25em rgba(0, 0, 0, 0)'
       text: '0 0 0.625em rgba(0, 0, 0, .25)'
 
 # Locale Strings
@@ -84,8 +84,8 @@ locale: locale
 refreshFrequency: 1000
 
 style: """
-  top: 922px
-  left: 207px
+  top: 916px
+  left: 297px
   font-family: 'Ubuntu', sans-serif
   font-size: 6px
   line-height: 1
@@ -95,9 +95,9 @@ style: """
   .container
     position: relative
     display: table
-    height: 114px
+    height: 134px
     padding: 1px 2px
-    width: 393px
+    width: 216px
     border-radius: 5px
     background: #{ settings.colors.background }
     box-shadow: #{ settings.shadows.box }
@@ -121,11 +121,11 @@ style: """
     color: #{ settings.colors.accent }
 
   .txt-small
-    font-size: 25px
+    font-size: 14px
     font-weight: 500
 
   .txt-large
-    font-size: 60px
+    font-size: 36px
     font-weight: 700
 
   .divider
