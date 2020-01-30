@@ -20,6 +20,7 @@ style: """
   background: rgba(255, 255, 255, .1);
   color: #fff
   font-family: Helvetica Neue
+  width: 178px
 
   table
     border-collapse: collapse
