@@ -21,6 +21,7 @@ style: """
   color: #fff
   font-family: Helvetica Neue
   width: 178px
+  height: 198px
 
   table
     border-collapse: collapse

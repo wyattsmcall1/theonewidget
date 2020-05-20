@@ -41,8 +41,8 @@ sizes:
 style:"""
   //Sets position of widget in pixels
   position: fixed
-  top: 407px
-  left: 782px
+  top: 440px
+  left: 837px
 
   //////////////////////////////////////////////////////////////////////
   //DO NOT edit anything below this unless you know what you're doing!!!
