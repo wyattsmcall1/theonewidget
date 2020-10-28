@@ -91,10 +91,10 @@ render: -> """
 command:    "osascript 'iTunesMiniPlayer.widget/iTunes.scpt'"
 
 afterRender: (domEl) ->
-    $(domEl).on 'click', '#iTunesPre', => @run "osascript -e 'tell application \"iTunes\" to previous track'"
-    $(domEl).on 'click', '#iTunesNext', => @run "osascript -e 'tell application \"iTunes\" to next track'"
-    $(domEl).on 'click', '#iTunesPause', => @run "osascript -e 'tell application \"iTunes\" to pause'"
-    $(domEl).on 'click', '#iTunesPlay', => @run "osascript -e 'tell application \"iTunes\" to play'"
+    $(domEl).on 'click', '#iTunesPre', => @run "osascript -e 'tell application \"Music\" to previous track'"
+    $(domEl).on 'click', '#iTunesNext', => @run "osascript -e 'tell application \"Music\" to next track'"
+    $(domEl).on 'click', '#iTunesPause', => @run "osascript -e 'tell application \"Music\" to pause'"
+    $(domEl).on 'click', '#iTunesPlay', => @run "osascript -e 'tell application \"Music\" to play'"
 
 update: (output, domEl) ->
     iTunesvalues = output.split('~')

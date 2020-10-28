@@ -34,7 +34,7 @@ style: """
 
   thead tr
     &:first-child td
-      font-size: 24px
+      font-size: 23px
       font-weight: 100
 
     &:last-child td

@@ -42,7 +42,7 @@ render: ->"""
 
 afterRender: (domEl) ->
   $(domEl).on 'click', '#iCloud', => @run "open '/Users/wyattsmcall/Library/Mobile\ Documents/com~apple~CloudDocs'"
-  $(domEl).on 'click', '#Computer', => @run "cd ~/Library/Application\\ Support/Übersicht/widgets/launchers.widgets/folder-launcher.widget/ && ./script.sh"
+  $(domEl).on 'click', '#Computer', => @run "cd ~/Library/Application\\ Support/Übersicht/widgets/folder-launcher.widget/ && ./script.sh"
   $(domEl).on 'click', '#Disk', => @run "open '/'"
   $(domEl).on 'click', '#Home', => @run "open ~"
   $(domEl).on 'click', '#Library', => @run "open ~/Library"
