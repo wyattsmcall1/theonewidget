@@ -128,7 +128,9 @@ update: (output,domEl) ->
       osRelease = ' Catalina'
       break
     else
-      icon = iconDir + "mac_os.png"
+      if Interface == 'Dark' then icon = iconDir + "big_sur.png" else icon = iconDir + "big_sur.png"
+      osRelease = ' Big Sur'
+      break
 
   # --- Preparing the dom-elements for replacement ---------------------
   dom = $(domEl)
@@ -162,8 +164,9 @@ style: """
     font-size 1rem
     font-weight 400
     display block
+    width 156px
     border 0px solid #{lineColor}
-    border-radius .5rem
+    border-radius 5px
     text-shadow 0 0 1px #{bkGround}
     background #{bkGround}
     opacity #{opacityLevel}
