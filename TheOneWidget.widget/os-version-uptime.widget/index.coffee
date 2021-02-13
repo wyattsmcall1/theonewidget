@@ -31,8 +31,8 @@ showBuild = true
 #-----------------------------------------------------------------------
 
 # Position the widget on the screen
-pos1  = 'left: 10px'
-pos2  = 'top: 480px'
+pos1  = 'left: 190px'
+pos2  = 'top: 848px'
 #-----------------------------------------------------------------------
 
 # --- Create the themes ------------------------------------------------
@@ -164,7 +164,7 @@ style: """
     font-size 1rem
     font-weight 400
     display block
-    width 156px
+    width 155px
     border 0px solid #{lineColor}
     border-radius 5px
     text-shadow 0 0 1px #{bkGround}

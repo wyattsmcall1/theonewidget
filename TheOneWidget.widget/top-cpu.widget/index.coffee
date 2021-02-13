@@ -3,7 +3,7 @@ command: "ps axro \"%cpu,ucomm,pid\" | awk 'FNR>1' | tail +1 | head -n 3 | sed -
 refreshFrequency: 2000
 
 style: """
-  top: 551px
+  top: 553px
   left: 10px
   color: #fff
   font-family: Helvetica Neue

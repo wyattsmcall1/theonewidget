@@ -3,7 +3,7 @@ command: "sysctl -n vm.loadavg | awk '{printf \"%s,%s,%s\",$2,$3,$4}'"
 refreshFrequency: 5000
 
 style: """
-    top: 660px
+    top: 662px
     left: 10px
     color: #fff
     font-family: Helvetica Neue

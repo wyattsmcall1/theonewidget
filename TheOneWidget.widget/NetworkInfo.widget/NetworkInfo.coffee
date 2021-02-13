@@ -55,7 +55,7 @@ style: """
   margin:0
   padding:0px
   left: 10px
-  top: 403px
+  top: 477px
   width: 210px
   background:rgba(#FFF, .1)
   border-radius:5px
@@ -65,8 +65,8 @@ style: """
     padding:2px
     
   .icon
-    height:32px
-    width:32px
+    height:22px
+    width:22px
     
   .primaryInfo, .secondaryInfo
     font-family: Helvetica Neue

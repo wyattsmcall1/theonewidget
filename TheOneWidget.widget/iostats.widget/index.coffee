@@ -6,7 +6,7 @@ command: "iostat -dw #{delay} -c 2  #{disk} | awk 'FNR>3' | awk '{printf \"%s,%s
 refreshFrequency: delay*1000
 
 style: """
-    top: 715px
+    top: 717px
     left: 10px
     color: #fff
     font-family: Helvetica Neue

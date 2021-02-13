@@ -84,7 +84,7 @@ locale: locale
 refreshFrequency: 1000
 
 style: """
-  top: 927px
+  top: 955px
   left: 297px
   font-family: 'Ubuntu', sans-serif
   font-size: 6px
@@ -98,7 +98,7 @@ style: """
     height: 134px
     padding: 1px 2px
     width: 216px
-    height: 156px
+    height: 100px
     border-radius: 5px
     background: #{ settings.colors.background }
     box-shadow: #{ settings.shadows.box }

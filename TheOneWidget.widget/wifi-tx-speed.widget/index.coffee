@@ -13,7 +13,7 @@ refreshFrequency: 10000
 # Adjust the style settings to suit. I've set the position to be just below the WiFi icon in my menu bar.
 
 style: """
-  top: 442px
+  top: 510px
   left: 222px
   color: #7dff7d
   font-family: San Francisco Display
@@ -43,8 +43,8 @@ style: """
       font-weight: 300
       
  img
-    height: 24px
-    width: 24px
+    height: 20px
+    width: 20px
     margin-bottom: -3px
       
 """

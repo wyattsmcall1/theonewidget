@@ -15,7 +15,7 @@ style		= 'full'	# mini or full	(default is full)				#
 lowPower	= 20														#
 #																		#
 # POSITION WIDGET ON SCREEN												#
-pos_top		= '870px'													#
+pos_top		= '920px'													#
 pos_left	= '440px'													#
 #																		#
 #-----------------------------------------------------------------------#

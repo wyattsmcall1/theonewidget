@@ -12,13 +12,13 @@ render: (output) -> """
 """
 
 style: """
-  top: 480px
-  left: 179px
+  top: 850px
+  left: 440px
   font-size: 14px
   font-family: Helvetica Neue
   font-weight: 100
   color: #fff
-  width: 62px
+  width: 45px
   height: 33px
   background-color: rgba(#FFF, 0.1)
   padding: 10px 10px 10px 10px
