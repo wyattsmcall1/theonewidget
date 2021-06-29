@@ -12,9 +12,9 @@ render: (output) -> """
 """
 
 style: """
-  top: 850px
+  top: 852px
   left: 440px
-  font-size: 14px
+  font-size: 12px
   font-family: Helvetica Neue
   font-weight: 100
   color: #fff

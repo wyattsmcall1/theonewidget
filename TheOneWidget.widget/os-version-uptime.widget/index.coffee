@@ -164,7 +164,7 @@ style: """
     font-size 1rem
     font-weight 400
     display block
-    width 155px
+    width 157px
     border 0px solid #{lineColor}
     border-radius 5px
     text-shadow 0 0 1px #{bkGround}
