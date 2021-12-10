@@ -4,7 +4,7 @@ refreshFrequency: 5000
 
 # choose your main disk from df -l output
 # disk on the first line = index 1
-disk_index: 5
+disk_index: 8
 
 style: """
   // Change bar height

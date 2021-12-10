@@ -102,35 +102,51 @@ update: (output,domEl) ->
   iconDir = 'os-version-uptime.widget/icons/'
 
   icon = ''; osRelease = ''
-  switch Number(osVersion.substr(0, 5))
-    when 10.10
-      icon = iconDir + "yosemite.png"
-      osRelease = ' Yosemite'
-      break
-    when 10.11
-      icon = iconDir + "el_capitan.png"
-      osRelease = ' El Capitan'
-      break
-    when 10.12
-      icon = iconDir + "sierra.png"
-      osRelease = ' Sierra'
-      break
-    when 10.13
-      icon = iconDir + "high_sierra.png"
-      osRelease = ' High Sierra'
-      break
-    when 10.14
-      if Interface == 'Dark' then icon = iconDir + "mojave_dark.png" else icon = iconDir + "mojave.png"
-      osRelease = ' Mojave'
-      break
-    when 10.15
-      if Interface == 'Dark' then icon = iconDir + "catalina_dark.png" else icon = iconDir + "catalina.png"
-      osRelease = ' Catalina'
-      break
+  switch Number(osVersion.substr(0, 1))
+    when 10
+      switch Number(osVersion.substr(0, 5))
+        when 10.10
+          icon = iconDir + "yosemite.png"
+          osRelease = ' Yosemite'
+          break
+        when 10.11
+          icon = iconDir + "el_capitan.png"
+          osRelease = ' El Capitan'
+          break
+        when 10.12
+          icon = iconDir + "sierra.png"
+          osRelease = ' Sierra'
+          break
+        when 10.13
+          icon = iconDir + "high_sierra.png"
+          osRelease = ' High Sierra'
+          break
+        when 10.14
+          if Interface == 'Dark' then icon = iconDir + "mojave_dark.png" else icon = iconDir + "mojave.png"
+          osRelease = ' Mojave'
+          break
+        when 10.15
+          if Interface == 'Dark' then icon = iconDir + "catalina_dark.png" else icon = iconDir + "catalina.png"
+          osRelease = ' Catalina'
+          break
+        else
+          if Interface == 'Dark' then icon = iconDir + "monterey.png" else icon = iconDir + "monterey.png"
+          osRelease = ' Monterey'
+          break
+    when 11
+        if Interface == 'Dark' then icon = iconDir + "big_sur.png" else icon = iconDir + "big_sur.png"
+        osRelease = ' Big Sur'
+        break
+    when 12
+        if Interface == 'Dark' then icon = iconDir + "monterey.png" else icon = iconDir + "monterey.png"
+        osRelease = ' Monterey'
+        break
     else
-      if Interface == 'Dark' then icon = iconDir + "big_sur.png" else icon = iconDir + "big_sur.png"
-      osRelease = ' Big Sur'
-      break
+        if Interface == 'Dark' then icon = iconDir + "monterey.png" else icon = iconDir + "monterey.png"
+        osRelease = ' Monterey'
+        break
+    
+        
 
   # --- Preparing the dom-elements for replacement ---------------------
   dom = $(domEl)
@@ -183,7 +199,7 @@ style: """
 
   .osName
     color #{osColor}
-    font-size .9rem
+    font-size .7rem
     font-weight 600
     margin-left 2px
     margin-top 1px
