@@ -108,7 +108,7 @@ style: """
       color: #{labelColor}
   
   .percent
-    font-size: 13px
+    font-size: 12px
     font-weight: 500
     margin: 0
     
@@ -122,7 +122,7 @@ style: """
     margin: 0
     margin-top: -2px
     margin-left: 4px
-    font-size: 10px
+    font-size: 9px
     font-weight: 400
     max-width: 100%
     color: #{statusColor}
